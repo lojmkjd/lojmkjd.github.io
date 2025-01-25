@@ -37,4 +37,4 @@ docker pull pointcloudlibrary/env:20.04
 
 ## 编译并安装PCL库
 
-参考文章 [编译安装PCL库](/_post/2024-12-16-compiling-PCL-library.md) ，选择适合版本的PCL库进行编译和安装。
+参考文章 [编译安装PCL库](./2024-12-16-compiling-PCL-library.md) ，选择适合版本的PCL库进行编译和安装。

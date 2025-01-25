@@ -142,7 +142,7 @@ sudo apt-get update
 
 ## 编译并安装PCL源码
 
-参考文章 [编译安装PCL库](/_post/2024-12-16-compiling-PCL-library.md) ，选择适合版本的PCL库进行编译和安装。
+参考文章 [编译安装PCL库](./2024-12-16-compiling-PCL-library.md) ，选择适合版本的PCL库进行编译和安装。
 
 ## 构建安装脚本
 
