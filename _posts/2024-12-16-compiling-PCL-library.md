@@ -11,7 +11,7 @@ tags: [Compile, Install]
 
 从Github或者镜像站点克隆PCL库的源码：
 
-```bash
+```
 # 克隆 PCL 仓库
 git clone https://gitee.com/mirrors/pcl.git
 ```
@@ -20,7 +20,7 @@ git clone https://gitee.com/mirrors/pcl.git
 
 进入克隆后的项目文件夹，进行配置和编译。
 
-```bash
+```
 # 进入项目文件夹
 cd pcl
 
@@ -52,7 +52,7 @@ make -j$(nproc)  # 使用所有CPU核心进行并行编译
 
 执行以下命令来安装编译后的程序：
 
-```bash
+```
 # 安装编译后的程序
 make install
 ```
@@ -61,14 +61,14 @@ make install
 
 安装PCL工具包，方便在终端使用PCL程序：
 
-```bash
+```
 # 安装 pcl-tools
 apt-get install pcl-tools
 ```
 
 在PCL目录下的`test`文件夹中，有`pcd`文件用于验证：
 
-```bash
+```
 # 测试安装是否成功
 pcl_viewer ../test/pcl_logo.pcd
 ```

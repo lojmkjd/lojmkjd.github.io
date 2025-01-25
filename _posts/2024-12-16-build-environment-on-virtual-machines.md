@@ -17,7 +17,7 @@ tags: [Environment, Ubuntu]
 
 ### 更新软件包列表
 
-```bash
+```
 sudo apt-get update
 ```
 
@@ -25,19 +25,19 @@ sudo apt-get update
 
 1. 安装git，便于进行项目管理和拉取库文件；安装pkg-config，提高安装和编译的效率：
 
-   ```bash
+   ```
    sudo apt-get install git pkg-config
    ```
 
 2. 安装编译器、更新linux的C标准库、安装测试单元库：
 
-   ```bash
+   ```
    sudo apt-get install build-essential linux-libc-dev libgtest-dev
    ```
 
 3. 安装Cmake工具：
 
-   ```bash
+   ```
    sudo apt-get install cmake
    ```
 
@@ -45,7 +45,7 @@ sudo apt-get update
 
 1. 使用apt-cache命令查看需要安装的依赖树：
 
-   ```bash
+   ```
    sudo apt-cache show libpcl-dev
    ```
 
@@ -60,19 +60,19 @@ sudo apt-get update
 
 2. 安装boost库：
 
-   ```bash
+   ```
    sudo apt-get install libboost-all-dev
    ```
 
 3. 安装eigen库：
 
-   ```bash
+   ```
    sudo apt-get install libeigen3-dev
    ```
 
 4. 安装flann库：
 
-   ```bash
+   ```
    sudo apt-get install libflann-dev
    ```
 
@@ -84,13 +84,13 @@ sudo apt-get update
 
 5. 安装vtk7库：
 
-   ```bash
+   ```
    sudo apt-get install libvtk7-qt-dev
    ```
 
 6. 安装Qhull库：
 
-   ```bash
+   ```
    sudo apt-get install libqhull* 
    ```
 
@@ -98,7 +98,7 @@ sudo apt-get update
 
 7. 安装libopenni库：
 
-   ```bash
+   ```
    sudo apt-get install libopenni-dev libopenni2-dev
    ```
 
@@ -106,50 +106,50 @@ sudo apt-get update
 
 1. 安装硬件交互库，用于处理usb接口的传感器：
 
-   ```bash
+   ```
    sudo apt-get install libusb-1.0-0-dev libusb-dev libudev-dev
    ```
 
 2. 安装并行计算库，提高大规模点云数据处理或并行计算速度：
 
-   ```bash
+   ```
    sudo apt-get install mpi-default-dev
    ```
 
 3. 安装网络抓包库，用于抓取无线传感器的数据流和分析：
 
-   ```bash
+   ```
    sudo apt-get install libpcap-dev
    ```
 
 4. 安装可视化组件，用于实现与图形界面、3D 渲染和可视化相关的功能：
 
-   ```bash
+   ```
    sudo apt-get install freeglut3-dev
    ```
 
 5. 安装X11，用于实现可视化和用户交互功能，也可用于远程操控：
 
-   ```bash
+   ```
    sudo apt-get install libxmu-dev libxi-dev
    ```
 
 6. 安装mono，使允许在Linux 上运行和开发 .NET 应用程序
 
-   ```bash
+   ```
    sudo apt-get install mono-complete
    ```
 
 ## 编译并安装PCL源码
 
-参考文章 [编译安装PCL库](/__post/2024-12-16-compiling-PCL-library.md) ，选择适合版本的PCL库进行编译和安装。
+参考文章 [编译安装PCL库](/_post/2024-12-16-compiling-PCL-library.md) ，选择适合版本的PCL库进行编译和安装。
 
 ## 构建安装脚本
 
 将上述步骤封装到一个Shell脚本`install_pcl_dependences.sh`中，以便自动化安装。
 
 ```sh
-#!/bin/bash
+#!/bin/
 
 # 更新软件包列表
 echo "更新软件包列表..."
@@ -248,7 +248,7 @@ echo "PCL 安装完成！"
 
 在工作文件夹中打开终端，运行以下命令来执行脚本：
 
-```bash
+```
 sh ./install_pcl_dependences.sh
 ```
 
@@ -256,8 +256,8 @@ sh ./install_pcl_dependences.sh
 
 如果在Linux中运行Shell脚本时遇到如下错误：
 
-```bash
--bash: ./xxx.sh: /bin/bash^M: bad interpreter: No such file or directory
+```
+-: ./xxx.sh: /bin/^M: bad interpreter: No such file or directory
 ```
 
 该错误通常是由于Windows系统中编辑的文件包含不兼容的换行符导致的。Windows使用CRLF（回车+换行）作为行结束符，而Linux使用LF（换行）作为行结束符。
@@ -266,12 +266,12 @@ sh ./install_pcl_dependences.sh
 
 1. 使用`sed`命令删除回车符：
 
-   ```bash
+   ```
    sed -i 's/\r$//' xxx.sh
    ```
 
 2. 在Linux中通过`touch`创建新脚本，并在Linux编辑器中修改：
 
-   ```bash
+   ```
    touch xxx.sh
    ```
