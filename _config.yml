@@ -15,7 +15,7 @@ timezone: Asia/Shanghai
 # ↓ --------------------------
 
 # the main title
-title: JasonLu's blog 
+title: lojmkjd's blog 
 
 tagline: welcome to my blog # it will display as the subtitle
 
@@ -27,7 +27,7 @@ description: >- # used by seo meta and the atom feed
 url: "https://lojmkjd.github.io"
 
 github:
-  username: JasonLu # change to your GitHub username
+  username: lojmkjd # change to your GitHub username
 
 twitter:
   username: twitter_username # change to your Twitter username
