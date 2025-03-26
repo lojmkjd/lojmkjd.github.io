@@ -27,7 +27,7 @@ $f_{\mu,\Sigma}(x)$ 是表示多维高斯分布的概率密度函数，其中 $x
 
 $D$ 是输入数据的维数，表示向量 $x$ 包含 $D$ 个随机变量
 
-$\mu$ 是一个$D$ 维向量，表示多维高斯分布的均值向量
+$\mu$ 是一个 $D$ 维向量，表示多维高斯分布的均值向量
 
 $\Sigma$ 是一个 $D\times D$ 的协方差矩阵，表示不同维度之间的协方差关系
 
@@ -147,7 +147,7 @@ $$
 > \Lambda=S S^T
 > $$
 >
-> 此时的$A$矩阵就是旋转矩阵$R$ 
+> 此时的 $A$矩阵就是旋转矩阵 $R$ 
 
 > [!IMPORTANT]
 >
@@ -195,7 +195,7 @@ $$
 如图，初始状态下局部坐标系喝全局坐标系为重合状态，此时物体上的任何一个点 $c$ 在局部坐标系 $\{object\}$ 中的坐标为 $P_c$ ，将该物体进行缩放、旋转、平移后摆放到世界坐标系下，此时这个物体所在的局部坐标系的原点在世界坐标系下的坐标为 $_{world}^{object}P$ ，物体上的点 $c$ 在世界坐标系下的坐标为 $P_w$ ，那么变换公式为（非齐次坐标格式）：
 
 $$
-_{}^{world}P =_{world}^{object}R_{3 \times 3} \cdot (S \cdot _{}^{object}P) +_{world}^{object}P
+ _{}^{world}P =_{world}^{object}R_{3 \times 3} \cdot (S \cdot _{}^{object}P) +_{world}^{object}P
 $$
 
 这样就可以实现将任何的物体摆放到世界坐标系下，实现所有物体在坐标上关系上的统一
@@ -203,7 +203,7 @@ $$
 以上公式也可以写为（齐次坐标格式）：
 
 $$
-_{}^{world}P=_{world}^{object}T \cdot _{world}^{object}R \cdot S \cdot _{}^{object}P
+ _{}^{world}P=_{world}^{object}T \cdot _{world}^{object}R \cdot S \cdot _{}^{object}P
 $$
 
 > [!NOTE]
