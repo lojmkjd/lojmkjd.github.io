@@ -205,7 +205,6 @@ $$
 $$
   _{}^{world}P=_{world}^{object}T \cdot _{world}^{object}R \cdot S \cdot _{}^{object}P
 $$
-
 > [!NOTE]
 >
 > 这里建议使用**先旋转再平移**的方法，可以避免平移引起的旋转误差。
@@ -224,7 +223,7 @@ $$
 > \begin{bmatrix}
 > r & rt \\
 > 0 & 1
-> \end{bmatrix}\\
+> \end{bmatrix} \\
 > 先旋转后平移：
 > T \cdot R =
 > \begin{bmatrix}
