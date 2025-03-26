@@ -429,7 +429,7 @@ x \\ y \\ n \\ 1
 \end{bmatrix}
 $$
 
-因为 $unknown \in[f,n]$ ，所以取  $unknown=n$ ，则
+因为 $unknown \in[f,n]$ ，所以取  $unknown=n$ ，则：
 
 $$
 \begin{bmatrix}
@@ -737,4 +737,4 @@ $c^m_l$ 是 $rgb$ 颜色值 。
 
 ![image-20250325214825438](/assets/images/image-20250325214825438.png)
 
-至此3DGS的基础就完结了，接下来就是具体实现了。$$
+至此3DGS的基础就完结了，接下来就是具体实现了。
