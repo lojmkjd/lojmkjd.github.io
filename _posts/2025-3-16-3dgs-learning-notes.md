@@ -47,13 +47,11 @@ $$
 
 ![image-20250317152715390](/assets/images/image-20250317152715390.png)
 
-可见当D=2时，随机变量为一个椭圆；当D=3时，随机变量绘制为一个椭球。
+可见当 $D=2$时，随机变量为一个椭圆；当 $D=3$时，随机变量绘制为一个椭球。
 
 ![image-20250317153006098](/assets/images/image-20250317153006098.png)
 
 又因为高斯函数的取值范围为 $[0,1]$ ，所以常熟 $constant \in [0,C]，C为任意正实数$ ， 由以上可知，3维高斯函数的随机变量在空间中为一个**实心椭球**。
-
-
 
 ## 椭球形状和位置的控制
 
@@ -151,7 +149,7 @@ $$
 
 > [!IMPORTANT]
 >
-> 一句话总结，只要确定了任意三维高斯对于标准高斯的平移向量b、旋转矩阵和缩放矩阵就可以获得一个高斯椭球的全部信息
+> 一句话总结，只要确定了任意三维高斯对于标准高斯的平移向量 $b$、旋转矩阵和缩放矩阵就可以获得一个高斯椭球的全部信息
 
 ## 3D高斯椭球的投影
 
@@ -195,7 +193,7 @@ $$
 如图，初始状态下局部坐标系喝全局坐标系为重合状态，此时物体上的任何一个点 $c$ 在局部坐标系 $\{object\}$ 中的坐标为 $P_c$ ，将该物体进行缩放、旋转、平移后摆放到世界坐标系下，此时这个物体所在的局部坐标系的原点在世界坐标系下的坐标为 $_{world}^{object}P$ ，物体上的点 $c$ 在世界坐标系下的坐标为 $P_w$ ，那么变换公式为（非齐次坐标格式）：
 
 $$
-  {}_{}^{world}P =_{world}^{object}R_{3 \times 3} \cdot (S \cdot _{}^{object}P) +_{world}^{object}P
+_{}^{world}P =_{world}^{object}R_{3 \times 3} \cdot (S \cdot _{}^{object}P) +_{world}^{object}P
 $$
 
 这样就可以实现将任何的物体摆放到世界坐标系下，实现所有物体在坐标上关系上的统一
@@ -203,7 +201,7 @@ $$
 以上公式也可以写为（齐次坐标格式）：
 
 $$
-  _{}^{world}P=_{world}^{object}T \cdot _{world}^{object}R \cdot S \cdot _{}^{object}P
+_{}^{world}P=_{world}^{object}T \cdot _{world}^{object}R \cdot S \cdot _{}^{object}P
 $$
 > [!NOTE]
 >
@@ -368,10 +366,10 @@ $$
 
 $$
 \begin{bmatrix}
-x'\\y'\\z'\\1
+x' \\ y' \\ z' \\ 1
 \end{bmatrix}
 =\begin{bmatrix}
-\frac{nx}{z}\\\frac{ny}{z}\\unknown\\1
+\frac{nx}{z }\\ \frac{ny}{z} \\ unknown \\ 1
 \end{bmatrix}
 $$
 
@@ -381,13 +379,13 @@ $$
 
 $$
 \begin{bmatrix}
-x'\\y'\\z'\\1
+x' \\ y' \\ z' \\ 1
 \end{bmatrix}
 =\begin{bmatrix}
-\frac{nx}{z}\\\frac{ny}{z}\\unknown\\1
-\end{bmatrix}=\frac{1}{z}M
+\frac{nx}{z} \\ \frac{ny}{z} \\ unknown \\ 1
+\end{bmatrix} = \frac{1}{z} M
 \begin{bmatrix}
-x\\y\\z\\1
+x \\ y \\ z \\ 1
 \end{bmatrix}
 $$
 
@@ -399,11 +397,11 @@ $$
 > 
 > $$
 >  \begin{bmatrix}
-> nx\\ny\\unknown \cdot z\\z
+> nx \\ ny \\ unknown \cdot z \\ z
 > \end{bmatrix}
 > =M
 > \begin{bmatrix}
-> x\\y\\z\\1
+> x \\ y \\ z \\ 1
 > \end{bmatrix}
 > $$
 
@@ -412,10 +410,10 @@ $$
 $$
 M=
 \begin{bmatrix}
-n & 0 & 0 & 0 \\
-0 & n & 0 & 0 \\
-0 & 0 & A & B \\
-0 & 0 & 1 & 0 \\
+n & 0 & 0 & 0  \\
+0 & n & 0 & 0  \\
+0 & 0 & A & B  \\
+0 & 0 & 1 & 0  \\
 \end{bmatrix}
 $$
 
@@ -423,11 +421,11 @@ $$
 
 $$
 \begin{bmatrix}
-nx\\ny\\unknown \cdot n\\n
+nx \\ ny \\ unknown \cdot n \\ n
 \end{bmatrix}
 =M
 \begin{bmatrix}
-x\\y\\n\\1
+x \\ y \\ n \\ 1
 \end{bmatrix}
 $$
 
@@ -435,17 +433,17 @@ $$
 
 $$
 \begin{bmatrix}
-nx\\ny\\n^2\\n
+nx \\ ny \\ n^2 \\ n
 \end{bmatrix}
 =
 \begin{bmatrix}
-n & 0 & 0 & 0 \\
-0 & n & 0 & 0 \\
-0 & 0 & A & B \\
-0 & 0 & 1 & 0 \\
+n & 0 & 0 & 0  \\
+0 & n & 0 & 0  \\
+0 & 0 & A & B  \\
+0 & 0 & 1 & 0  \\
 \end{bmatrix}
 \begin{bmatrix}
-x\\y\\n\\1
+x \\ y \\ n \\ 1
 \end{bmatrix}
 $$
 
@@ -459,7 +457,7 @@ $$
 
 $$
 \begin{bmatrix}
-nx\\ny\\f^2\\f
+nx \\ ny \\ f^2 \\ f
 \end{bmatrix}
 =
 \begin{bmatrix}
@@ -469,7 +467,7 @@ n & 0 & 0 & 0 \\
 0 & 0 & 1 & 0 \\
 \end{bmatrix}
 \begin{bmatrix}
-x\\y\\f\\1
+x \\ y \\ f \\ 1
 \end{bmatrix}
 $$
 
@@ -501,9 +499,9 @@ $$
 
 $$
 \begin{bmatrix}
-x'\\y'\\z'\\1
+x' \\ y' \\ z' \\ 1
 \end{bmatrix}
-=\frac{1}{z}
+= \frac{1}{z}
 \begin{bmatrix}
 n & 0 & 0 & 0 \\
 0 & n & 0 & 0 \\
@@ -511,10 +509,10 @@ n & 0 & 0 & 0 \\
 0 & 0 & 1 & 0 \\
 \end{bmatrix}
 \begin{bmatrix}
-x\\y\\z\\1
+x \\ y \\ z \\ 1
 \end{bmatrix}
 =\begin{bmatrix}
-\frac{nx}{z}\\\frac{ny}{z}\\n+f-\frac{nf}{z}\\1
+\frac{nx}{z} \\ \frac{ny}{z} \\ n+f-\frac{nf}{z} \\ 1
 \end{bmatrix}
 $$
 
@@ -534,10 +532,10 @@ $$
 
 $$
 \begin{bmatrix}
-x'\\y'\\z'
+x' \\ y' \\ z'
 \end{bmatrix}
 =\begin{bmatrix}
-\frac{nx}{z}\\\frac{ny}{z}\\n+f-\frac{nf}{z}
+\frac{nx}{z} \\ \frac{ny}{z} \\ n+f-\frac{nf}{z}
 \end{bmatrix}
 $$
 
@@ -545,8 +543,8 @@ $$
 
 $$
 J=\begin{bmatrix}
-\frac{n}{z} & 0 & -\frac{nx}{z^2}\\
-0 & \frac{n}{z} & -\frac{ny}{z^2}\\
+\frac{n}{z} & 0 & -\frac{nx}{z^2} \\
+0 & \frac{n}{z} & -\frac{ny}{z^2} \\
 0 & 0 & \frac{nf}{z^2}
 \end{bmatrix}
 $$
@@ -613,16 +611,16 @@ $$
    - $[l,r]$ 是立方体在 $x$ 轴上的范围，$[b,t]$ 是立方体在 $y$ 轴上的范围，$[f,n]$ 是立方体在 $z$ 轴上的范围
 
 2. 将立方体平移到原点，变换矩阵为：
-  
-  $$
-   T_{ortho}=
+
+$$
+T_{ortho}=
    \begin{bmatrix}
    1 & 0 & 0 & -\frac{r+l}{2} \\
    0 & 1 & 0 & -\frac{t+b}{2} \\
    0 & 0 & 1 & -\frac{n+f}{2} \\
    0 & 0 & 0 & 1 \\
    \end{bmatrix}
-   $$
+$$
 
 3. 将立方体缩放到 $[-1,1]^3$ （立方体边长为2），变换矩阵为：
    
